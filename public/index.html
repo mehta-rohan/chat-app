@@ -6,16 +6,19 @@
 </head>
 <body>
 	<p >Welcome to my chat box</p>
-	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
-	<script type="text/javascript">
-		var socket = io();
-		socket.on('connect',()=>{
-			console.log('Hey I know');
-		});
 
-		socket.on('disconnect',()=>{
-			console.log('Where are you?');
-		});
+	<li id="msgs"></li>
+
+
+	<form id="msg-from">
+		<input type="text" name="name" , placeholder="Your Name">
+		<input type="text" name="msg" placeholder="Type Msg">
+		<button>Send
+		</button>
+	</form>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/index.js">
 	</script>
 </body>
 </html>
